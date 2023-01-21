@@ -1,3 +1,150 @@
+:root {
+    --container-max-width: 1000px;
+}
+
 * {
     box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+.flex,
+.flex-center {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+/* ------------------------------------------
+                  HEADER
+---------------------------------------------*/
+
+.header {
+    width: 100%;
+    gap: 24px;
+    aspect-ratio: 16 / 10;
+    background-color: grey;
+    position: relative;
+}
+
+.header-container {
+    gap: 24px;
+    background-color: aquamarine;
+}
+
+.header-avatar {
+    background-color: lightpink;
+    width: 25vw;
+    max-width: 100px;
+    height: auto;
+}
+
+.header-container-name {
+    background-color: lightpink;
+}
+
+.networks {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: aquamarine;
+}
+
+.networks li {
+    width: 48px;
+    height: 48px;
+    padding: 14px;
+    background-color: lightpink;
+}
+
+@media (min-width: 768px) {
+    .header {
+        width: 100%;
+        height: 500px;
+    }
+
+    .header-avatar {
+        max-width: 160px;
+    }
+
+    .networks {
+        bottom: 8px;
+        right: 8px;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 2500px) {
+    .header {
+        width: var(--container-max-width);
+        margin: 40px auto 0;
+    }   
+}
+
+
+/* ------------------------------------------
+                  PROJECTS
+---------------------------------------------*/
+
+.projects {
+    background-color: grey;
+    margin: 7vw;
+    max-width: var(--container-max-width);
+}
+
+.projects-title,
+.projects-description {
+    background-color: lightpink;
+}
+
+.projects-title {
+    padding: 0;
+}
+
+.projects-description {
+    margin-top: 32px;
+    line-height: 1.5;
+}
+
+.projects-list {
+    display: grid;
+    margin-top: 32px;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.projects-list li {
+    background-color: aquamarine;
+}
+
+@media (min-width: 768px) {
+    .projects {
+        margin: 64px 32px;
+    }
+
+    .projects-list {
+        margin-top: 64px;
+    }
+}
+
+/* ------------------------------------------
+                  FOOTER
+---------------------------------------------*/
+
+.footer {
+    background-color: grey;
+    width: 100%;
+    height: 200px;
 }
