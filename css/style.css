@@ -1,5 +1,5 @@
 :root {
-    --container-max-width: 1000px;
+    --container-max-width: 960px;
     --color-main: #7500AC;
     --color-main-dark: #350D4E;
     --color-light: #FFFFFF;
@@ -252,35 +252,42 @@ p {
 ---------------------------------------------*/
 
 .card {
+    --card-margin: 20px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 8px;
 }
 
 .card-image {
-    aspect-ratio: 16 / 9;
-    background-color: grey;
+    position: relative;
+    aspect-ratio: 16 / 11;
+    background: url(../img/movies.png);
+    background-size: cover;
 }
 
 .card-title {
-    margin: 16px 16px 0;
+    margin: var(--card-margin) var(--card-margin) 0;
     font-size: 20px;
     font-weight: bold;
 }
 
 .card-about {
-    margin: 8px 16px 16px;
+    margin: 8px var(--card-margin) var(--card-margin);
     font-size: 14px;
 }
 
 .project-icons {
-    margin: 16px;
-    gap: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 0 40px 0 0;
+    padding: 4px 16px 4px 8px;
 }
 
 .project-icons > li {
-    width: 30px;
-    height: 30px;
+    width: 34px;
 }
 
 .project-icons img {
@@ -291,8 +298,8 @@ p {
 .card-buttons {
     display: grid;
     gap: 8px;
-    grid-template-columns: 1fr 1fr;
-    margin: 24px 16px 16px;
+    grid-template-columns: 1fr;
+    margin: var(--card-margin);
 }
 
 .button-code,
