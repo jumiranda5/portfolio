@@ -8,36 +8,8 @@
     --gradient-dark: rgba(53, 13, 78, 0.85);
 }
 
-@font-face {
-    font-family: titillium-web;
-    src: url(../fonts/TitilliumWeb-Regular.ttf);
-}
-
-@font-face {
-    font-family: titillium-web;
-    src: url(../fonts/TitilliumWeb-Light.ttf);
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: titillium-web;
-    src: url(../fonts/TitilliumWeb-SemiBold.ttf);
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: titillium-web;
-    src: url(../fonts/TitilliumWeb-Bold.ttf);
-    font-weight: bold;
-}
-
 * {
     box-sizing: border-box;
-}
-
-body {
-    font-family: titillium-web;
-    color: var(--color-main-dark);
 }
 
 img {
@@ -50,12 +22,9 @@ a {
     text-decoration: none;
 }
 
-p {
-    line-height: 1.5;
-}
 
 /* ------------------------------------------
-                  HEADER
+                   FLEX
 ---------------------------------------------*/
 
 .flex,
@@ -102,19 +71,7 @@ p {
     height: auto;
 }
 
-.header-name {
-    color: var(--color-light);
-    font-size: 7vw;
-    font-weight: 600;
-}
-
-.header-occupation {
-    margin-top: 6px;
-    margin-bottom: 2px;
-    color: var(--color-light-secondary);
-    font-size: 4.2vw;
-    font-weight: 300;
-}
+.header-name { margin-top: 2px; }
 
 .networks {
     position: absolute;
@@ -139,24 +96,16 @@ p {
 
 @media (min-width: 460px) {
     .header-container { gap: 24px; }
-    .header-name { font-size: 32px; }
-    .header-occupation { font-size: 18px; }
 }
 
 @media (min-width: 768px) {
     .header { height: 500px; }
 
-    .header-container { gap: 32px; }
+    .header-container { gap: 28px; }
 
-    .header-avatar { max-width: 160px; }
+    .header-avatar { max-width: 140px; }
 
-    .header-name { font-size: 46px; }
-    
-    .header-occupation {
-        margin-top: 8px;
-        margin-bottom: 4px;
-        font-size: 26px;
-    }
+    .header-occupation { margin-top: 2px; }
 
     .networks {
         top: 16px;
@@ -171,11 +120,21 @@ p {
     }
 }
 
+@media (min-width: 1024px) {
+
+    .header-container { gap: 32px; }
+
+    .header-avatar { max-width: 164px; }
+
+    .header-name { margin-top: 4px; }
+
+}
+
 @media (min-width: 2500px) {
     .header {
         width: var(--container-max-width);
         margin: 40px auto 0;
-    }   
+    }
 }
 
 
@@ -188,62 +147,33 @@ p {
     max-width: var(--container-max-width);
 }
 
-.projects-title {
-    margin-top: 8px;
-    font-size: 20px;
-    font-weight: bold;
-}
+.projects-title { margin-top: 8px; }
 
-.projects-description {
-    margin-top: 16px;
-    font-size: 14px;
-}
+.projects-description { margin-top: 16px; }
 
 .projects-list {
     display: grid;
-    margin-top: 32px;
+    margin-top: 7vw;
     gap: 32px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 @media (min-width: 768px) {
-    .projects {
-        margin: 64px;
-    }
+    .projects { margin: 64px; }
 
-    .projects-list {
-        margin-top: 64px;
-    }
+    .projects-list { margin-top: 64px; }
 
-    .projects-title {
-        margin-top: 0;
-        font-size: 28px;
-    }
+    .projects-title { margin-top: 0; }
     
-    .projects-description {
-        margin-top: 24px;
-        font-size: 16px;
-    }
+    .projects-description { margin-top: 24px; }
 }
 
 @media (min-width: 1024px) {
-    .projects {
-        margin: 72px;
-    }
+    .projects { margin: 88px; }
 
-    .projects-list {
-        margin-top: 72px;
-    }
+    .projects-list { margin-top: 88px; }
 
-    .projects-title {
-        font-size: 32px;
-    }
-    
-    .projects-description {
-        margin-top: 24px;
-        font-size: 18px;
-        line-height: 1.7;
-    }
+    .projects-description { margin-top: 24px; }
 }
 
 
@@ -267,13 +197,11 @@ p {
 
 .card-title {
     margin: var(--card-margin) var(--card-margin) 0;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 4px 0;
 }
 
 .card-about {
     margin: 8px var(--card-margin) var(--card-margin);
-    font-size: 14px;
 }
 
 .project-icons {
@@ -306,8 +234,6 @@ p {
 .button-page {
     text-align: center;
     border-radius: 8px;
-    font-weight: 600;
-    
 }
 
 .button-code {
@@ -331,4 +257,103 @@ p {
     background-color: grey;
     width: 100%;
     height: 200px;
+}
+
+
+/* ------------------------------------------
+                  TYPOGRAPHY
+---------------------------------------------*/
+
+@font-face {
+    font-family: tanker;
+    src: url(../fonts/Tanker-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSans-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: noto;
+    src: url(../fonts/NotoSans-Bold.ttf);
+    font-weight: bold;
+}
+
+body {
+    font-family: noto;
+    color: var(--color-main-dark);
+}
+
+p {
+    line-height: 1.45;
+}
+
+.header-name,
+.projects-title,
+.card-title {
+    font-family: tanker;
+    font-weight: 400;
+}
+
+.header-name {
+    color: var(--color-light);
+    font-size: 7vw;
+}
+
+.header-occupation {
+    color: var(--color-light-secondary);
+    font-size: 4vw;
+}
+
+.projects-title { font-size: 24px; }
+
+.projects-description { font-size: 16px; }
+
+.card-title {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.card-about { font-size: 14px; }
+
+.button-code,
+.button-page { font-weight: 600; }
+
+@media (min-width: 460px) {
+
+    .header-name { font-size: 32px; }
+    
+    .header-occupation { font-size: 18px; }
+
+}
+
+@media (min-width: 768px) {
+
+    .header-name { font-size: 42px; }
+    
+    .header-occupation { font-size: 20px; }
+
+    .projects-title { font-size: 28px; }
+    
+}
+
+@media (min-width: 1024px) {
+
+    .header-name { font-size: 50px; }
+    
+    .header-occupation { font-size: 24px; }
+
+    .projects-title { font-size: 34px; }
+    
+    .projects-description {
+        font-size: 18px;
+        line-height: 1.6;
+    }
 }
