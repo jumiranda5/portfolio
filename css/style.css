@@ -1,3 +1,14 @@
+:root {
+    --container-max-width: 960px;
+    --color-main: #7500AC;
+    --color-main-dark: #350D4E;
+    --color-accent: #e20088;
+    --color-light: #FFFFFF;
+    --color-light-secondary: rgba(255, 255, 255, 0.7);
+    --gradient-light: rgba(117, 0, 172, 0.83);
+    --gradient-dark: rgba(53, 13, 78, 0.85);
+}
+
 @font-face {
     font-family: tanker;
     src: url(../fonts/Tanker-Regular.ttf);
@@ -20,16 +31,6 @@
     font-weight: bold;
 }
 
-:root {
-    --container-max-width: 960px;
-    --color-main: #7500AC;
-    --color-main-dark: #350D4E;
-    --color-light: #FFFFFF;
-    --color-light-secondary: rgba(255, 255, 255, 0.7);
-    --gradient-light: rgba(117, 0, 172, 0.83);
-    --gradient-dark: rgba(53, 13, 78, 0.85);
-}
-
 * {
     box-sizing: border-box;
 }
@@ -37,6 +38,7 @@
 body {
     font-family: noto;
     color: var(--color-main-dark);
+    background-color: #fafafa;
 }
 
 img {
@@ -118,6 +120,7 @@ span {
 
 .network-link svg {
     fill: var(--color-light-secondary);
+    transition: 300ms;
 }
 
 .network-link:hover > *,
@@ -144,6 +147,7 @@ span {
     margin-top: 40px;
     gap: 32px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background-color: #FFFFFF;
 }
 
 
@@ -205,6 +209,7 @@ span {
 
 .card-about {
     margin: 8px var(--card-margin) var(--card-margin);
+    height: 68px;
 }
 
 .card-buttons {
@@ -212,6 +217,12 @@ span {
     gap: 8px;
     grid-template-columns: 1fr;
     margin: var(--card-margin);
+}
+
+.button-code,
+.button-page,
+.button-icon {
+    transition: 300ms;
 }
 
 .button-code,
@@ -227,16 +238,42 @@ span {
     height: 42px;
 }
 
+.button-code:hover {
+    color: var(--color-main-dark);
+    border: 2px solid var(--color-main-dark);
+}
+
+.button-code:active {
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
 .button-page {
-    background-color: var(--color-main);
     color: var(--color-light);
+    background-color: var(--color-main);
     height: 44px;
+}
+
+.button-page:hover {
+    background-color: var(--color-main-dark);
+}
+
+.button-page:active {
+    background-color: var(--color-accent);
 }
 
 .button-icon {
     width: 18px;
     height: auto;
     fill: var(--color-main);
+}
+
+.button-code:hover .button-icon {
+    fill: var(--color-main-dark);
+}
+
+.button-code:active .button-icon {
+    fill: var(--color-accent);
 }
 
 
@@ -283,6 +320,10 @@ p {
 .card-title {
     font-size: 20px;
     letter-spacing: 0.5px;
+}
+
+.card-about {
+    color: var(--color-main-dark-secondary);
 }
 
 .button-code,
@@ -363,18 +404,21 @@ p {
     .networks {
         top: 16px;
         right: 16px;
-        gap: 8px;
+        gap: 12px;
     }
 
     .network-link {
-        width: 48px;
-        height: 48px;
+        width: 52px;
+        height: 52px;
         padding: 12px;
     }
 
     .projects { margin: 64px; }
 
-    .projects-list { margin-top: 64px; }
+    .projects-list { 
+        margin-top: 64px;
+        gap: 40px;
+    }
 
     .projects-title { margin-top: 0; }
     
