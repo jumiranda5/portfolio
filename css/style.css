@@ -21,6 +21,12 @@
 
 @font-face {
     font-family: noto;
+    src: url(../fonts/NotoSans-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: noto;
     src: url(../fonts/NotoSans-SemiBold.ttf);
     font-weight: 600;
 }
@@ -282,10 +288,39 @@ span {
 ---------------------------------------------*/
 
 .footer {
-    background-color: grey;
+    background-color: var(--color-main-dark);
     width: 100%;
-    height: 200px;
 }
+
+.footer-container {
+    margin: 32px;
+    max-width: var(--container-max-width);
+}
+
+.footer-title {
+    color: var(--color-light);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.footer-link,
+.footer-email {
+    display: block;
+    padding: 8px 0;
+    color: var(--color-light-secondary);
+    margin-top: 2px;
+    width: fit-content;
+}
+
+.footer-link span,
+.footer-email span {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-light-secondary);
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
 
 
 /* ------------------------------------------
@@ -423,6 +458,8 @@ p {
     .projects-title { margin-top: 0; }
     
     .projects-description { margin-top: 24px; }
+
+    .footer-container { margin: 64px auto; }
 
     /* Typography */
 
