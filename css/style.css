@@ -83,14 +83,14 @@ span {
     position: relative;
     width: 100%;
     gap: 24px;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 11;
     background: linear-gradient(var(--gradient-light), var(--gradient-dark)), url(../img/bg.png);
     background-size: cover;
 }
 
-@supports not (aspect-ratio: 16 / 10) {
+@supports not (aspect-ratio: 16 / 11) {
     .header {
-        height: 220px;
+        height: 240px;
     }
 }
 
@@ -98,7 +98,7 @@ span {
 
 .header-avatar {
     width: 25vw;
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
 }
 
@@ -113,7 +113,7 @@ span {
 .network-link {
     width: 44px;
     height: 48px;
-    padding: 14px;
+    padding: 12px;
 }
 
 .network-link svg {
@@ -131,7 +131,7 @@ span {
 ---------------------------------------------*/
 
 .projects {
-    margin: 7vw;
+    margin: 32px 24px;
     max-width: var(--container-max-width);
 }
 
@@ -141,7 +141,7 @@ span {
 
 .projects-list {
     display: grid;
-    margin-top: 7vw;
+    margin-top: 40px;
     gap: 32px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -256,7 +256,7 @@ span {
 ---------------------------------------------*/
 
 p {
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .header-name,
@@ -268,15 +268,15 @@ p {
 
 .header-name {
     color: var(--color-light);
-    font-size: 7vw;
+    font-size: 8vw;
 }
 
 .header-occupation {
     color: var(--color-light-secondary);
-    font-size: 4vw;
+    font-size: 4.5vw;
 }
 
-.projects-title { font-size: 24px; }
+.projects-title { font-size: 26px; }
 
 .projects-description { font-size: 16px; }
 
