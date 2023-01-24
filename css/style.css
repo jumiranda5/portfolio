@@ -114,14 +114,14 @@ span {
 
 .networks {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 4px;
+    right: 4px;
 }
 
 .network-link {
-    width: 44px;
-    height: 48px;
-    padding: 12px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.625rem;
 }
 
 .network-link svg {
@@ -215,7 +215,7 @@ span {
 
 .card-about {
     margin: 8px var(--card-margin) var(--card-margin);
-    height: 68px;
+    height: 4.25rem;
 }
 
 .card-buttons {
@@ -241,7 +241,7 @@ span {
 .button-code {
     color: var(--color-main);
     border: 2px solid var(--color-main);
-    height: 42px;
+    height: 2.625rem;
 }
 
 .button-code:hover {
@@ -257,7 +257,7 @@ span {
 .button-page {
     color: var(--color-light);
     background-color: var(--color-main);
-    height: 44px;
+    height: 2.75rem;
 }
 
 .button-page:hover {
@@ -290,16 +290,17 @@ span {
 .footer {
     background-color: var(--color-main-dark);
     width: 100%;
+    padding: 32px;
 }
 
 .footer-container {
-    margin: 32px;
+    margin: 0 auto;
     max-width: var(--container-max-width);
 }
 
 .footer-title {
     color: var(--color-light);
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 16px;
 }
 
@@ -314,8 +315,8 @@ span {
 
 .footer-link span,
 .footer-email span {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: var(--color-light-secondary);
     vertical-align: middle;
     margin-right: 2px;
@@ -348,12 +349,12 @@ p {
     font-size: 4.5vw;
 }
 
-.projects-title { font-size: 26px; }
+.projects-title { font-size: 1.625rem; }
 
-.projects-description { font-size: 16px; }
+.projects-description { font-size: 1rem; }
 
 .card-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 0.5px;
 }
 
@@ -363,7 +364,7 @@ p {
 
 .button-code,
 .button-page,
-.card-about { font-size: 14px; }
+.card-about { font-size: 0.88rem; }
 
 .button-code,
 .button-page { font-weight: 700; }
@@ -414,15 +415,21 @@ p {
     }
 }
 
+@media (min-width: 360px) {
+
+    .projects { margin: 32px; }
+
+}
+
 @media (min-width: 460px) {
 
     .header-container { gap: 24px; }
 
     /* Typography */
 
-    .header-name { font-size: 32px; }
+    .header-name { font-size: 2rem; }
     
-    .header-occupation { font-size: 18px; }
+    .header-occupation { font-size: 1.125rem; }
 
 }
 
@@ -443,31 +450,29 @@ p {
     }
 
     .network-link {
-        width: 52px;
-        height: 52px;
-        padding: 12px;
+        width: 3.25rem;
+        height: 3.25rem;
     }
 
     .projects { margin: 64px; }
 
     .projects-list { 
         margin-top: 64px;
-        gap: 40px;
     }
 
     .projects-title { margin-top: 0; }
     
     .projects-description { margin-top: 24px; }
 
-    .footer-container { margin: 64px auto; }
+    .footer { padding: 64px; }
 
     /* Typography */
 
-    .header-name { font-size: 46px; }
+    .header-name { font-size: 2.875rem; }
     
-    .header-occupation { font-size: 22px; }
+    .header-occupation { font-size: 1.375rem; }
 
-    .projects-title { font-size: 30px; }
+    .projects-title { font-size: 1.875rem; }
 
 }
 
@@ -487,14 +492,14 @@ p {
 
     /* Typography */
 
-    .header-name { font-size: 50px; }
+    .header-name { font-size: 3.125rem; }
     
-    .header-occupation { font-size: 24px; }
+    .header-occupation { font-size: 1.5rem; }
 
-    .projects-title { font-size: 34px; }
+    .projects-title { font-size: 2.125rem; }
     
     .projects-description {
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 1.6;
     }
 
