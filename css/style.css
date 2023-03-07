@@ -1,4 +1,5 @@
 :root {
+    font-size: 16px;
     --container-max-width: 960px;
     --color-main: #7500AC;
     --color-main-dark: #350D4E;
@@ -415,7 +416,7 @@ p {
     }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 375px) {
 
     .projects { margin: 32px; }
 
