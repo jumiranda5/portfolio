@@ -347,7 +347,7 @@ p {
 
 .header-occupation {
     color: var(--color-light-secondary);
-    font-size: 4.5vw;
+    font-size: 2.8vw;
 }
 
 .projects-title { font-size: 1.625rem; }
@@ -430,7 +430,7 @@ p {
 
     .header-name { font-size: 2rem; }
     
-    .header-occupation { font-size: 1.125rem; }
+    .header-occupation { font-size: 1rem; }
 
 }
 
@@ -471,7 +471,7 @@ p {
 
     .header-name { font-size: 2.875rem; }
     
-    .header-occupation { font-size: 1.375rem; }
+    .header-occupation { font-size: 1.125rem; }
 
     .projects-title { font-size: 1.875rem; }
 
@@ -495,7 +495,7 @@ p {
 
     .header-name { font-size: 3.125rem; }
     
-    .header-occupation { font-size: 1.5rem; }
+    .header-occupation { font-size: 1.375rem; }
 
     .projects-title { font-size: 2.125rem; }
     
